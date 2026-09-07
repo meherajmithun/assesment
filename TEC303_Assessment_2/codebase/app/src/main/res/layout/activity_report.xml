@@ -13,7 +13,7 @@
             android:id="@+id/reportHero"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:background="@color/midnight"
+            android:background="@drawable/hero_background"
             android:orientation="vertical"
             android:paddingStart="24dp"
             android:paddingTop="28dp"
@@ -40,7 +40,7 @@
                 android:layout_marginTop="24dp"
                 android:fontFamily="sans-serif"
                 android:text="@string/combined_total"
-                android:textColor="#C7D2E3"
+                android:textColor="@color/hero_text_secondary"
                 android:textSize="14sp" />
 
             <TextView

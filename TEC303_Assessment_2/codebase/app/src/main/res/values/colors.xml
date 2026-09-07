@@ -1,16 +1,26 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="midnight">#101C2C</color>
-    <color name="track_blue">#155EEF</color>
-    <color name="pool_cyan">#0E9FBE</color>
+    <color name="midnight">#10213A</color>
+    <color name="hero_end">#183A63</color>
+    <color name="track_blue">#246BFD</color>
+    <color name="primary_action">#155EEF</color>
+    <color name="primary_action_pressed">#0F49B8</color>
+    <color name="pool_cyan">#18B6D1</color>
     <color name="coral">#E94F64</color>
-    <color name="cloud">#F4F7FB</color>
+    <color name="cloud">#F3F6FB</color>
     <color name="white">#FFFFFF</color>
-    <color name="ink">#172B4D</color>
-    <color name="slate">#5E6C84</color>
-    <color name="line">#DDE4EE</color>
-    <color name="success">#16875D</color>
+    <color name="ink">#132B4D</color>
+    <color name="slate">#617089</color>
+    <color name="line">#D8E1ED</color>
+    <color name="surface">#FFFFFF</color>
+    <color name="input_surface">#F9FBFE</color>
+    <color name="hero_text_secondary">#C7D7EA</color>
+    <color name="progress_background">#35506F</color>
+    <color name="secondary_pressed">#E9F0FE</color>
+    <color name="success">#087A55</color>
     <color name="success_soft">#E7F7F0</color>
-    <color name="warning">#B54708</color>
+    <color name="success_line">#A8DFC9</color>
+    <color name="warning">#AF4D09</color>
     <color name="warning_soft">#FFF4E5</color>
+    <color name="warning_line">#F2C78F</color>
 </resources>

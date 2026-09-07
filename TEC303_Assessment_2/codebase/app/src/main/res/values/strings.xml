@@ -7,6 +7,7 @@
     <string name="total_progress_label">Combined workout</string>
     <string name="total_progress_value">%1$d / 150 min</string>
     <string name="total_progress_initial">0 / 150 min</string>
+    <string name="workout_minutes_heading">WORKOUT MINUTES</string>
     <string name="report_total_initial">0 min</string>
     <string name="running">Running</string>
     <string name="running_initial">R</string>
