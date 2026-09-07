@@ -1,6 +1,7 @@
 package com.kbs.fitnessreport
 
 import android.app.Activity
+import android.content.Context
 import android.os.Bundle
 import android.widget.Button
 import android.widget.LinearLayout
@@ -8,6 +9,10 @@ import android.widget.TextView
 import android.widget.Toast
 
 class ReportActivity : Activity() {
+    override fun attachBaseContext(newBase: Context) {
+        super.attachBaseContext(AppTheme.wrapContext(newBase))
+    }
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_report)
@@ -45,12 +50,16 @@ class ReportActivity : Activity() {
         val overallStatus = findViewById<TextView>(R.id.overallStatusText)
         if (report.total.achieved) {
             overallStatus.setText(R.string.overall_reached)
+            overallStatus.setBackgroundResource(R.drawable.hero_status_success)
+            overallStatus.setTextColor(getColor(R.color.hero_success))
         } else {
             overallStatus.text = resources.getQuantityString(
                 R.plurals.overall_remaining,
                 report.total.remainingMinutes,
                 report.total.remainingMinutes,
             )
+            overallStatus.setBackgroundResource(R.drawable.hero_status_warning)
+            overallStatus.setTextColor(getColor(R.color.hero_warning))
         }
 
         findViewById<TextView>(R.id.summaryText).setText(

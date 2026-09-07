@@ -34,33 +34,46 @@
                 android:layout_marginTop="5dp"
                 android:text="@string/report_title" />
 
-            <TextView
-                android:layout_width="wrap_content"
+            <LinearLayout
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="24dp"
-                android:fontFamily="sans-serif"
-                android:text="@string/combined_total"
-                android:textColor="@color/hero_text_secondary"
-                android:textSize="14sp" />
+                android:layout_marginTop="22dp"
+                android:background="@drawable/hero_progress_card"
+                android:elevation="4dp"
+                android:orientation="vertical"
+                android:padding="16dp">
 
-            <TextView
-                android:id="@+id/totalMinutesText"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:fontFamily="sans-serif-condensed"
-                android:text="@string/report_total_initial"
-                android:textColor="@color/white"
-                android:textSize="48sp"
-                android:textStyle="bold" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="sans-serif-medium"
+                    android:text="@string/combined_total"
+                    android:textColor="@color/hero_text_secondary"
+                    android:textSize="13sp" />
 
-            <TextView
-                android:id="@+id/overallStatusText"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="4dp"
-                android:fontFamily="sans-serif-medium"
-                android:textColor="@color/pool_cyan"
-                android:textSize="15sp" />
+                <TextView
+                    android:id="@+id/totalMinutesText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="sans-serif-condensed"
+                    android:includeFontPadding="false"
+                    android:text="@string/report_total_initial"
+                    android:textColor="@color/white"
+                    android:textSize="46sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/overallStatusText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:fontFamily="sans-serif-medium"
+                    android:paddingStart="10dp"
+                    android:paddingTop="6dp"
+                    android:paddingEnd="10dp"
+                    android:paddingBottom="6dp"
+                    android:textSize="13sp" />
+            </LinearLayout>
         </LinearLayout>
 
         <LinearLayout
@@ -76,8 +89,11 @@
                 android:id="@+id/summaryText"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:background="@drawable/summary_background"
+                android:elevation="2dp"
                 android:fontFamily="sans-serif"
                 android:lineSpacingExtra="3dp"
+                android:padding="16dp"
                 android:textColor="@color/slate"
                 android:textSize="15sp" />
 
@@ -86,29 +102,48 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="18dp"
-                android:orientation="vertical"
+                android:elevation="2dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
                 android:padding="17dp">
 
-                <TextView
-                    style="@style/FitnessTextFieldLabel"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="@string/running" />
+                <ImageView
+                    android:layout_width="44dp"
+                    android:layout_height="44dp"
+                    android:background="@drawable/badge_running"
+                    android:importantForAccessibility="no"
+                    android:padding="10dp"
+                    android:src="@drawable/ic_running"
+                    android:tint="@color/coral" />
 
-                <TextView
-                    android:id="@+id/runningMinutesText"
-                    style="@style/FitnessTextCaption"
-                    android:layout_width="wrap_content"
+                <LinearLayout
+                    android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="4dp" />
+                    android:layout_marginStart="14dp"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
 
-                <TextView
-                    android:id="@+id/runningStatusText"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="10dp"
-                    android:fontFamily="sans-serif-medium"
-                    android:textSize="14sp" />
+                    <TextView
+                        style="@style/FitnessTextFieldLabel"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/running" />
+
+                    <TextView
+                        android:id="@+id/runningMinutesText"
+                        style="@style/FitnessTextCaption"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="3dp" />
+
+                    <TextView
+                        android:id="@+id/runningStatusText"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:fontFamily="sans-serif-medium"
+                        android:textSize="14sp" />
+                </LinearLayout>
             </LinearLayout>
 
             <LinearLayout
@@ -116,29 +151,48 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="12dp"
-                android:orientation="vertical"
+                android:elevation="2dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
                 android:padding="17dp">
 
-                <TextView
-                    style="@style/FitnessTextFieldLabel"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="@string/cycling" />
+                <ImageView
+                    android:layout_width="44dp"
+                    android:layout_height="44dp"
+                    android:background="@drawable/badge_cycling"
+                    android:importantForAccessibility="no"
+                    android:padding="10dp"
+                    android:src="@drawable/ic_cycling"
+                    android:tint="@color/success" />
 
-                <TextView
-                    android:id="@+id/cyclingMinutesText"
-                    style="@style/FitnessTextCaption"
-                    android:layout_width="wrap_content"
+                <LinearLayout
+                    android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="4dp" />
+                    android:layout_marginStart="14dp"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
 
-                <TextView
-                    android:id="@+id/cyclingStatusText"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="10dp"
-                    android:fontFamily="sans-serif-medium"
-                    android:textSize="14sp" />
+                    <TextView
+                        style="@style/FitnessTextFieldLabel"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/cycling" />
+
+                    <TextView
+                        android:id="@+id/cyclingMinutesText"
+                        style="@style/FitnessTextCaption"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="3dp" />
+
+                    <TextView
+                        android:id="@+id/cyclingStatusText"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:fontFamily="sans-serif-medium"
+                        android:textSize="14sp" />
+                </LinearLayout>
             </LinearLayout>
 
             <LinearLayout
@@ -146,29 +200,48 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="12dp"
-                android:orientation="vertical"
+                android:elevation="2dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
                 android:padding="17dp">
 
-                <TextView
-                    style="@style/FitnessTextFieldLabel"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="@string/swimming" />
+                <ImageView
+                    android:layout_width="44dp"
+                    android:layout_height="44dp"
+                    android:background="@drawable/badge_swimming"
+                    android:importantForAccessibility="no"
+                    android:padding="10dp"
+                    android:src="@drawable/ic_swimming"
+                    android:tint="@color/pool_cyan" />
 
-                <TextView
-                    android:id="@+id/swimmingMinutesText"
-                    style="@style/FitnessTextCaption"
-                    android:layout_width="wrap_content"
+                <LinearLayout
+                    android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="4dp" />
+                    android:layout_marginStart="14dp"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
 
-                <TextView
-                    android:id="@+id/swimmingStatusText"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="10dp"
-                    android:fontFamily="sans-serif-medium"
-                    android:textSize="14sp" />
+                    <TextView
+                        style="@style/FitnessTextFieldLabel"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/swimming" />
+
+                    <TextView
+                        android:id="@+id/swimmingMinutesText"
+                        style="@style/FitnessTextCaption"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="3dp" />
+
+                    <TextView
+                        android:id="@+id/swimmingStatusText"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:fontFamily="sans-serif-medium"
+                        android:textSize="14sp" />
+                </LinearLayout>
             </LinearLayout>
 
             <LinearLayout
@@ -176,29 +249,48 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="12dp"
-                android:orientation="vertical"
+                android:elevation="2dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
                 android:padding="17dp">
 
-                <TextView
-                    style="@style/FitnessTextFieldLabel"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="@string/weightlifting" />
+                <ImageView
+                    android:layout_width="44dp"
+                    android:layout_height="44dp"
+                    android:background="@drawable/badge_weightlifting"
+                    android:importantForAccessibility="no"
+                    android:padding="10dp"
+                    android:src="@drawable/ic_weightlifting"
+                    android:tint="@color/warning" />
 
-                <TextView
-                    android:id="@+id/weightliftingMinutesText"
-                    style="@style/FitnessTextCaption"
-                    android:layout_width="wrap_content"
+                <LinearLayout
+                    android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="4dp" />
+                    android:layout_marginStart="14dp"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
 
-                <TextView
-                    android:id="@+id/weightliftingStatusText"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="10dp"
-                    android:fontFamily="sans-serif-medium"
-                    android:textSize="14sp" />
+                    <TextView
+                        style="@style/FitnessTextFieldLabel"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/weightlifting" />
+
+                    <TextView
+                        android:id="@+id/weightliftingMinutesText"
+                        style="@style/FitnessTextCaption"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="3dp" />
+
+                    <TextView
+                        android:id="@+id/weightliftingStatusText"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:fontFamily="sans-serif-medium"
+                        android:textSize="14sp" />
+                </LinearLayout>
             </LinearLayout>
 
             <Button
@@ -206,6 +298,8 @@
                 style="@style/FitnessButtonPrimary"
                 android:layout_width="match_parent"
                 android:layout_marginTop="20dp"
+                android:drawableStart="@drawable/ic_arrow_back"
+                android:drawablePadding="8dp"
                 android:text="@string/edit_workout" />
         </LinearLayout>
     </LinearLayout>

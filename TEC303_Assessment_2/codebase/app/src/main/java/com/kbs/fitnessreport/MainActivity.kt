@@ -1,6 +1,7 @@
 package com.kbs.fitnessreport
 
 import android.app.Activity
+import android.content.Context
 import android.content.Intent
 import android.os.Bundle
 import android.text.Editable
@@ -18,6 +19,11 @@ class MainActivity : Activity() {
     private lateinit var weightliftingInput: EditText
     private lateinit var totalText: TextView
     private lateinit var totalProgress: ProgressBar
+    private lateinit var themeButton: Button
+
+    override fun attachBaseContext(newBase: Context) {
+        super.attachBaseContext(AppTheme.wrapContext(newBase))
+    }
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -25,6 +31,7 @@ class MainActivity : Activity() {
 
         bindViews()
         addLiveTotalListeners()
+        setupThemeButton()
 
         findViewById<Button>(R.id.resetButton).setOnClickListener { resetInputs() }
         findViewById<Button>(R.id.reportButton).setOnClickListener { openReport() }
@@ -37,6 +44,29 @@ class MainActivity : Activity() {
         weightliftingInput = findViewById(R.id.weightliftingInput)
         totalText = findViewById(R.id.totalText)
         totalProgress = findViewById(R.id.totalProgress)
+        themeButton = findViewById(R.id.themeButton)
+    }
+
+    private fun setupThemeButton() {
+        val darkModeEnabled = AppTheme.isDarkMode(this)
+        themeButton.setText(
+            if (darkModeEnabled) {
+                R.string.use_light_mode
+            } else {
+                R.string.use_dark_mode
+            },
+        )
+        themeButton.setCompoundDrawablesWithIntrinsicBounds(
+            if (darkModeEnabled) R.drawable.ic_sun else R.drawable.ic_moon,
+            0,
+            0,
+            0,
+        )
+
+        themeButton.setOnClickListener {
+            AppTheme.toggle(this)
+            recreate()
+        }
     }
 
     private fun addLiveTotalListeners() {

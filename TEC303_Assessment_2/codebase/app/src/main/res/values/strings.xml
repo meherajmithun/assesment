@@ -8,15 +8,13 @@
     <string name="total_progress_value">%1$d / 150 min</string>
     <string name="total_progress_initial">0 / 150 min</string>
     <string name="workout_minutes_heading">WORKOUT MINUTES</string>
+    <string name="use_dark_mode">Dark mode</string>
+    <string name="use_light_mode">Light mode</string>
     <string name="report_total_initial">0 min</string>
     <string name="running">Running</string>
-    <string name="running_initial">R</string>
     <string name="cycling">Cycling</string>
-    <string name="cycling_initial">C</string>
     <string name="swimming">Swimming</string>
-    <string name="swimming_initial">S</string>
     <string name="weightlifting">Weightlifting</string>
-    <string name="weightlifting_initial">W</string>
     <string name="target_60">Target · 60 min</string>
     <string name="target_30">Target · 30 min</string>
     <string name="target_10">Target · 10 min</string>

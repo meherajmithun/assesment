@@ -20,12 +20,26 @@
             android:paddingEnd="24dp"
             android:paddingBottom="26dp">
 
-            <TextView
-                style="@style/FitnessTextEyebrow"
-                android:layout_width="wrap_content"
+            <LinearLayout
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="@string/screen_one_eyebrow"
-                android:textColor="@color/pool_cyan" />
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <TextView
+                    style="@style/FitnessTextEyebrow"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/screen_one_eyebrow"
+                    android:textColor="@color/pool_cyan" />
+
+                <Button
+                    android:id="@+id/themeButton"
+                    style="@style/FitnessButtonTheme"
+                    android:layout_width="wrap_content"
+                    android:text="@string/use_dark_mode" />
+            </LinearLayout>
 
             <TextView
                 style="@style/FitnessTextScreenTitle"
@@ -47,39 +61,48 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="24dp"
-                android:gravity="center_vertical"
-                android:orientation="horizontal">
+                android:layout_marginTop="22dp"
+                android:background="@drawable/hero_progress_card"
+                android:elevation="4dp"
+                android:orientation="vertical"
+                android:padding="16dp">
 
-                <TextView
-                    android:layout_width="0dp"
+                <LinearLayout
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:fontFamily="sans-serif-medium"
-                    android:text="@string/total_progress_label"
-                    android:textColor="@color/white"
-                    android:textSize="14sp" />
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
 
-                <TextView
-                    android:id="@+id/totalText"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:fontFamily="sans-serif-medium"
-                    android:text="@string/total_progress_initial"
-                    android:textColor="@color/white"
-                    android:textSize="14sp" />
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:fontFamily="sans-serif-medium"
+                        android:text="@string/total_progress_label"
+                        android:textColor="@color/hero_text_secondary"
+                        android:textSize="13sp" />
+
+                    <TextView
+                        android:id="@+id/totalText"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="sans-serif-medium"
+                        android:text="@string/total_progress_initial"
+                        android:textColor="@color/white"
+                        android:textSize="15sp" />
+                </LinearLayout>
+
+                <ProgressBar
+                    android:id="@+id/totalProgress"
+                    style="?android:attr/progressBarStyleHorizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="9dp"
+                    android:layout_marginTop="12dp"
+                    android:contentDescription="@string/progress_description"
+                    android:max="150"
+                    android:progress="0"
+                    android:progressDrawable="@drawable/progress_track" />
             </LinearLayout>
-
-            <ProgressBar
-                android:id="@+id/totalProgress"
-                style="?android:attr/progressBarStyleHorizontal"
-                android:layout_width="match_parent"
-                android:layout_height="10dp"
-                android:layout_marginTop="9dp"
-                android:contentDescription="@string/progress_description"
-                android:max="150"
-                android:progress="0"
-                android:progressDrawable="@drawable/progress_track" />
         </LinearLayout>
 
         <LinearLayout
@@ -109,16 +132,14 @@
                 android:orientation="horizontal"
                 android:padding="16dp">
 
-                <TextView
-                    android:layout_width="42dp"
-                    android:layout_height="42dp"
-                    android:background="@drawable/status_warning"
-                    android:fontFamily="sans-serif-condensed"
-                    android:gravity="center"
-                    android:text="@string/running_initial"
-                    android:textColor="@color/coral"
-                    android:textSize="21sp"
-                    android:textStyle="bold" />
+                <ImageView
+                    android:layout_width="44dp"
+                    android:layout_height="44dp"
+                    android:background="@drawable/badge_running"
+                    android:importantForAccessibility="no"
+                    android:padding="10dp"
+                    android:src="@drawable/ic_running"
+                    android:tint="@color/coral" />
 
                 <LinearLayout
                     android:layout_width="0dp"
@@ -135,10 +156,10 @@
                         android:text="@string/running" />
 
                     <TextView
-                        style="@style/FitnessTextCaption"
+                        style="@style/FitnessTextTarget"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_marginTop="2dp"
+                        android:layout_marginTop="5dp"
                         android:text="@string/target_60" />
                 </LinearLayout>
 
@@ -160,16 +181,14 @@
                 android:orientation="horizontal"
                 android:padding="16dp">
 
-                <TextView
-                    android:layout_width="42dp"
-                    android:layout_height="42dp"
-                    android:background="@drawable/status_success"
-                    android:fontFamily="sans-serif-condensed"
-                    android:gravity="center"
-                    android:text="@string/cycling_initial"
-                    android:textColor="@color/success"
-                    android:textSize="21sp"
-                    android:textStyle="bold" />
+                <ImageView
+                    android:layout_width="44dp"
+                    android:layout_height="44dp"
+                    android:background="@drawable/badge_cycling"
+                    android:importantForAccessibility="no"
+                    android:padding="10dp"
+                    android:src="@drawable/ic_cycling"
+                    android:tint="@color/success" />
 
                 <LinearLayout
                     android:layout_width="0dp"
@@ -186,10 +205,10 @@
                         android:text="@string/cycling" />
 
                     <TextView
-                        style="@style/FitnessTextCaption"
+                        style="@style/FitnessTextTarget"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_marginTop="2dp"
+                        android:layout_marginTop="5dp"
                         android:text="@string/target_30" />
                 </LinearLayout>
 
@@ -211,16 +230,14 @@
                 android:orientation="horizontal"
                 android:padding="16dp">
 
-                <TextView
-                    android:layout_width="42dp"
-                    android:layout_height="42dp"
-                    android:background="@drawable/status_success"
-                    android:fontFamily="sans-serif-condensed"
-                    android:gravity="center"
-                    android:text="@string/swimming_initial"
-                    android:textColor="@color/pool_cyan"
-                    android:textSize="21sp"
-                    android:textStyle="bold" />
+                <ImageView
+                    android:layout_width="44dp"
+                    android:layout_height="44dp"
+                    android:background="@drawable/badge_swimming"
+                    android:importantForAccessibility="no"
+                    android:padding="10dp"
+                    android:src="@drawable/ic_swimming"
+                    android:tint="@color/pool_cyan" />
 
                 <LinearLayout
                     android:layout_width="0dp"
@@ -237,10 +254,10 @@
                         android:text="@string/swimming" />
 
                     <TextView
-                        style="@style/FitnessTextCaption"
+                        style="@style/FitnessTextTarget"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_marginTop="2dp"
+                        android:layout_marginTop="5dp"
                         android:text="@string/target_30" />
                 </LinearLayout>
 
@@ -262,16 +279,14 @@
                 android:orientation="horizontal"
                 android:padding="16dp">
 
-                <TextView
-                    android:layout_width="42dp"
-                    android:layout_height="42dp"
-                    android:background="@drawable/status_warning"
-                    android:fontFamily="sans-serif-condensed"
-                    android:gravity="center"
-                    android:text="@string/weightlifting_initial"
-                    android:textColor="@color/warning"
-                    android:textSize="21sp"
-                    android:textStyle="bold" />
+                <ImageView
+                    android:layout_width="44dp"
+                    android:layout_height="44dp"
+                    android:background="@drawable/badge_weightlifting"
+                    android:importantForAccessibility="no"
+                    android:padding="10dp"
+                    android:src="@drawable/ic_weightlifting"
+                    android:tint="@color/warning" />
 
                 <LinearLayout
                     android:layout_width="0dp"
@@ -288,10 +303,10 @@
                         android:text="@string/weightlifting" />
 
                     <TextView
-                        style="@style/FitnessTextCaption"
+                        style="@style/FitnessTextTarget"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_marginTop="2dp"
+                        android:layout_marginTop="5dp"
                         android:text="@string/target_10" />
                 </LinearLayout>
 
@@ -314,6 +329,9 @@
                     style="@style/FitnessButtonSecondary"
                     android:layout_width="0dp"
                     android:layout_weight="1"
+                    android:drawableStart="@drawable/ic_refresh"
+                    android:drawablePadding="8dp"
+                    android:drawableTint="@color/track_blue"
                     android:text="@string/reset" />
 
                 <Space
@@ -325,6 +343,8 @@
                     style="@style/FitnessButtonPrimary"
                     android:layout_width="0dp"
                     android:layout_weight="1.45"
+                    android:drawableEnd="@drawable/ic_arrow_right"
+                    android:drawablePadding="8dp"
                     android:text="@string/get_report" />
             </LinearLayout>
         </LinearLayout>
