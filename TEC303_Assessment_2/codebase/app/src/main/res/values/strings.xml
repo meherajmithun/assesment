@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Training Report</string>
+    <string name="screen_one_eyebrow">TODAY’S TRAINING</string>
+    <string name="screen_one_title">Build your 150</string>
+    <string name="screen_one_intro">Enter the minutes completed for each workout. Your combined target is 150 minutes.</string>
+    <string name="total_progress_label">Combined workout</string>
+    <string name="total_progress_value">%1$d / 150 min</string>
+    <string name="total_progress_initial">0 / 150 min</string>
+    <string name="report_total_initial">0 min</string>
+    <string name="running">Running</string>
+    <string name="running_initial">R</string>
+    <string name="cycling">Cycling</string>
+    <string name="cycling_initial">C</string>
+    <string name="swimming">Swimming</string>
+    <string name="swimming_initial">S</string>
+    <string name="weightlifting">Weightlifting</string>
+    <string name="weightlifting_initial">W</string>
+    <string name="target_60">Target · 60 min</string>
+    <string name="target_30">Target · 30 min</string>
+    <string name="target_10">Target · 10 min</string>
+    <string name="minutes_hint">Minutes</string>
+    <string name="reset">Reset</string>
+    <string name="get_report">Get report</string>
+    <string name="report_eyebrow">WORKOUT REPORT</string>
+    <string name="report_title">Today at a glance</string>
+    <string name="combined_total">Combined total</string>
+    <string name="overall_reached">Overall: Achieved</string>
+    <plurals name="overall_remaining">
+        <item quantity="one">Overall: Not achieved · %1$d minute still needed</item>
+        <item quantity="other">Overall: Not achieved · %1$d minutes still needed</item>
+    </plurals>
+    <string name="actual_and_target">%1$d min completed · %2$d min target</string>
+    <string name="target_reached">✓ Achieved</string>
+    <string name="target_remaining">Not achieved · %1$d min still needed</string>
+    <string name="all_targets_reached">Excellent — every individual target and the combined target were reached.</string>
+    <string name="some_targets_remaining">Keep going — review the orange items to see what remains.</string>
+    <string name="edit_workout">Edit workout</string>
+    <string name="minutes_required">Please enter %1$s duration.</string>
+    <string name="minutes_invalid">Please enter a valid whole number.</string>
+    <string name="minutes_negative">Duration cannot be negative.</string>
+    <string name="fix_errors">Check the highlighted fields before getting the report.</string>
+    <string name="report_data_missing">Workout details were missing. Please enter them again.</string>
+    <string name="progress_description">Combined workout progress toward 150 minutes</string>
+</resources>

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="midnight">#101C2C</color>
+    <color name="track_blue">#155EEF</color>
+    <color name="pool_cyan">#0E9FBE</color>
+    <color name="coral">#E94F64</color>
+    <color name="cloud">#F4F7FB</color>
+    <color name="white">#FFFFFF</color>
+    <color name="ink">#172B4D</color>
+    <color name="slate">#5E6C84</color>
+    <color name="line">#DDE4EE</color>
+    <color name="success">#16875D</color>
+    <color name="success_soft">#E7F7F0</color>
+    <color name="warning">#B54708</color>
+    <color name="warning_soft">#FFF4E5</color>
+</resources>
